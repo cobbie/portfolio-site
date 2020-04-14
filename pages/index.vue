@@ -11,8 +11,13 @@
   </div>
   </div>
   <div class="about-me">
-    <h1>What I like to do</h1>
-    
+    <h1 class="about-header">What I like to do</h1>
+    <div class="about-grid">
+      <div class="about-grid-item item-1">Item 1</div>
+      <div class="about-grid-item item-2">Item 2</div>
+      <div class="about-grid-item item-3">Item 3</div>
+      <div class="about-grid-item item-4">Item 4</div>
+    </div>
   </div></div>
 </template>
 
@@ -71,10 +76,56 @@ export default {
   background-color: #EDEDED;
   color: #1A2859;
   padding-top: 10vh;
+  margin: 0 auto;
+  display: block;
+    text-align: center;
+}
+
+.about-header{
+    margin: 0 auto;
+  display: block;
+  width: 90vw;
+  text-align: center
 }
 
 .about-me>h1{
   font-size: 49.82px;
   font-weight: normal
+}
+
+.about-grid{
+  display: grid;
+  margin: 0 auto;
+  margin-top: 68px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "first-item second-item" 
+  "third-item fourth-item";
+  width: 80vw;
+  height: 80vh;
+}
+
+.about-grid-item{
+
+}
+
+.item-1{
+  /* grid-area: first-item; */
+  /* grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2; */
+}
+
+.item-2{
+  /* grid-area: second-item */
+}
+
+.item-3{
+  /* grid-area: third-item */
+}
+.item-4{
+  /* grid-area: fourth-item */
 }
 </style>
