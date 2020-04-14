@@ -26,7 +26,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
 
 .proj-container{
-width: 367px;
+width: 350px;
 height: 399.94px;
 
 }
@@ -56,9 +56,11 @@ border-radius: 0px 0px 28.46px 28.46px;
 .proj-desc{
     padding-top: 7px;
     font-size: 12px;
+    width: 80%
 }
 
 .proj-title, .proj-org, .proj-desc{
-    padding-left: 23px;
+    width: 90%;
+    margin: 0 auto;
 }
 </style>

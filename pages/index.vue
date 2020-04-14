@@ -7,11 +7,11 @@
   <img src="~/assets/linkedin.svg">
   </div>
   <div id="links">
-  <span>Resume</span> • <span>Works</span> • <span>Ewan</span>
+  <a>About</a>  •  <a>Projects</a>  •  <a>Resume</a>
   </div>
   </div>
   <div class="about-me">
-    <h1 class="about-header">What I like to do</h1>
+    <h1 class="about-header"><a name="about">What I like to do</a></h1>
     <div class="about-grid">
       <div class="about-grid-item item-1">
         <img class="about-item-img" src="~/assets/idea.svg" alt="">
@@ -33,6 +33,7 @@
   </div>
   <div class="works">
     <h1 class="project-header-main">Projects</h1>
+    <h3 class="resume">You can also take a look at my <u>resume</u>.</h3>
     <div class="proj-grid">
       <project class="proj-grid-item proj-item-1" title="Marawi Interactive Website" org="The GUIDON" desc="Using a static site generator framework called Gridsome and Vue.js, I wrote code that was "></project>
       <project class="proj-grid-item"></project>
@@ -42,6 +43,10 @@
       <project class="proj-grid-item"></project>
     </div>
   </div>
+
+  <footer>
+    <p>Wanna connect/inquire, collaborate, have a cup of coffee, or play some Apex legends/Pokemon? You can shoot me an email at cobbiequintos@gmail.com, send me a LinkedIn message, or tweet me @cobbiequintos.</p>
+  </footer>
   
   </div>
 </template>
@@ -106,6 +111,9 @@ export default {
   margin: 0 auto;
   display: block;
     text-align: center;
+height: auto;
+padding-top: 80px;
+padding-bottom: 80px;
 }
 
 .about-header{
@@ -184,8 +192,21 @@ font-size: 40.82px;
   text-decoration: line-through
 }
 
+.resume{
+  margin: 0 auto;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 12px;
+  font-weight: normal
+}
+
+
 .works{
   background-color: #1A2859;
+  height: auto;
+  padding-top: 80px;
+  padding-bottom: 100px;
 }
 .project-header-main{
   color: white;
@@ -193,5 +214,42 @@ font-size: 40.82px;
   font-size: 40.82px;
   padding-top: 60px;
 text-align: center;
+}
+.proj-grid{
+display: grid;
+margin: 0 auto;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+width: 90vw;
+}
+.proj-grid-item{
+
+}
+
+footer{
+  height: 200px;
+background-color: #E8E8E8;
+display: flex;
+justify-content: center;
+vertical-align: middle;
+align-items: center;
+  height: 20vh;
+
+}
+
+footer>p{
+  width: 80vw;
+font-family: Noto Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 25px;
+}
+u, a{
+  cursor: pointer;
+}
+
+a:hover{
+  font-weight: bold;
 }
 </style>
