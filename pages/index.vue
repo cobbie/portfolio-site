@@ -30,15 +30,30 @@
         <h1 class="about-item-header"><span id="code">Code</span> Build things</h1>
         <p class="about-item-p"></p></div>
     </div>
-  </div></div>
+  </div>
+  <div class="works">
+    <h1 class="project-header-main">Projects</h1>
+    <div class="proj-grid">
+      <project class="proj-grid-item proj-item-1" title="Marawi Interactive Website" org="The GUIDON" desc="Using a static site generator framework called Gridsome and Vue.js, I wrote code that was "></project>
+      <project class="proj-grid-item"></project>
+      <project class="proj-grid-item"></project>
+      <project class="proj-grid-item"></project>
+      <project class="proj-grid-item"></project>
+      <project class="proj-grid-item"></project>
+    </div>
+  </div>
+  
+  </div>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import Project from '~/components/Project.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    Project
   }
 }
 </script>
@@ -85,7 +100,7 @@ export default {
 }
 
 .about-me{
-  background-color: #EDEDED;
+  background-color: #E8E8E8;
   color: #1A2859;
   padding-top: 10vh;
   margin: 0 auto;
@@ -97,11 +112,8 @@ export default {
     margin: 0 auto;
   display: block;
   width: 90vw;
-  text-align: center
-}
-
-.about-me>h1{
-  font-size: 49.82px;
+  text-align: center;
+font-size: 40.82px;
   font-weight: normal
 }
 
@@ -116,6 +128,7 @@ export default {
   "third-item fourth-item";
   width: 80vw;
   height: 80vh;
+  color: black;
 }
 
 .about-grid-item{
@@ -159,12 +172,26 @@ export default {
   text-align: left;
   padding-top: 10px;
   line-height: 22px;
+  font-size: 15px;
 }
 .about-item-header{
   grid-area: header;
   text-align: left;
+  font-size: 30px;
+
 }
 #code{
   text-decoration: line-through
+}
+
+.works{
+  background-color: #1A2859;
+}
+.project-header-main{
+  color: white;
+  font-weight: normal;
+  font-size: 40.82px;
+  padding-top: 60px;
+text-align: center;
 }
 </style>
