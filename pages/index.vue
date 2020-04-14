@@ -2,12 +2,12 @@
   <div><div class="container">
   <h1>Cobbie Quintos</h1>
   <div id="logos">
-  <img src="~/assets/github.svg">
-  <img src="~/assets/twitter.svg">
-  <img src="~/assets/linkedin.svg">
+  <a href="https://www.github.com/cobbie"><img src="~/assets/github.svg"></a>
+  <a href="https://www.twitter.com/cobbiequintos"><img src="~/assets/twitter.svg"></a>
+  <a href="https://www.linkedin.com/in/cobbie-quintos-01b536159/"><img src="~/assets/linkedin.svg"></a>
   </div>
   <div id="links">
-  <a>About</a>  •  <a>Projects</a>  •  <a>Resume</a>
+  <a @click="scroll('about-me')">About</a>  •  <a @click="scroll('works')">Projects</a>  •  <a>Resume</a>
   </div>
   </div>
   <div class="about-me">
@@ -59,6 +59,11 @@ export default {
   components: {
     Logo,
     Project
+  },
+  methods: {
+    scroll: function(id){
+      document.getElementsByClassName(id)[0].scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
   }
 }
 </script>
@@ -87,11 +92,17 @@ export default {
   margin-top: 57px;
 }
 
-#logos>img{
-  padding: 20px;
+#logos>a{
+  display: inline-block;
+    padding: 20px;
   transition: all 0.2s;
   transform-origin: 50% 50%;
 
+}
+#logos>a:hover{
+
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 #logos>img:hover{
@@ -114,6 +125,7 @@ export default {
 height: auto;
 padding-top: 80px;
 padding-bottom: 80px;
+
 }
 
 .about-header{
@@ -252,4 +264,6 @@ u, a{
 a:hover{
   font-weight: bold;
 }
+
+
 </style>
