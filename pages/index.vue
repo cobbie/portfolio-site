@@ -20,9 +20,23 @@
       </div>
     </div>
     <div class="about-me">
+      <div class= "screws-div">
+        <img src="~/assets/screw.svg" class="rotate-neg test screw" alt="screw">
+      <img src="~/assets/screw.svg" class="rotate test2 screw" alt="screw">
+      </div>
+      <div class= "screws-div2">
+        <img src="~/assets/screw.svg" class="rotate-neg test screw" alt="screw">
+      <img src="~/assets/screw.svg" class="rotate test2 screw" alt="screw">
+      </div>
+      <div class= "screws-div3">
+        <img src="~/assets/screw.svg" class="rotate-neg test screw" alt="screw">
+      <img src="~/assets/screw.svg" class="rotate test2 screw" alt="screw">
+      </div>
+      
       <h1 class="about-header">
         <a name="about">What I like to do</a>
       </h1>
+
       <div class="about-grid">
         <div class="about-grid-item item-1">
           <img class="about-item-img" src="~/assets/idea.svg" alt />
@@ -48,17 +62,21 @@
             <span id="code">Networking</span> Meeting people
           </h1>
           <p class="about-item-p">
-            I'm an introvert. But I've had the privilege of being able to go on two life-changing experiences abroad
+            I'm an introvert. But
+             <!-- I've had the privilege of being able to go on two life-changing experiences abroad
             during my stay in college. Among the many things I learned in these adventures, here's one of the most valuable lessons: there
-            are so many things you can only learn by meeting and talking to other people, especially from different backgrounds and places.
+            are so many things you can only learn by meeting and talking to other people, especially from different backgrounds and places. -->
           </p>
         </div>
         <div class="about-grid-item item-4">
           <img class="about-item-img" src="~/assets/idea.svg" alt />
           <h1 class="about-item-header">
-            <span id="code">Code</span> Build things
+            <span id="code">Lorem</span> Ipsum
           </h1>
-          <p class="about-item-p"></p>
+          <p class="about-item-p">
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+            
+          </p>
         </div>
       </div>
     </div>
@@ -249,6 +267,8 @@ export default {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   width: 90vw;
+  padding-top: 80px;
+  row-gap: 5em;;
 }
 .proj-grid-item {
 }
@@ -283,5 +303,66 @@ a:hover {
 .resume-link{
   text-decoration: none;
   color: white;
+}
+
+@keyframes rotating{
+  from{
+transform: rotate(0deg);
+  }
+
+  to{
+transform: rotate(360deg);
+  }
+}
+
+@keyframes negative-rotating{
+  from{
+    transform: rotate(0deg)
+  }
+  to{
+    transform: rotate(-360deg)
+  }
+}
+.rotate{
+  animation: rotating 4s linear infinite
+}
+
+.rotate-neg{
+  animation: negative-rotating 4s linear infinite;
+}
+
+.screws-div{
+  margin-top: 20px;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between
+}
+.test{
+  margin-left: 40px;
+}
+
+.test2{
+  margin-right: 40px
+}
+
+.screws-div2{
+  margin-top: 300px;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between
+}
+
+.screws-div3{
+  margin-top: 580px;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between
+}
+.screw{
+  height: auto;
+  width: 40px;
 }
 </style>

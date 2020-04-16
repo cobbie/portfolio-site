@@ -37,7 +37,9 @@ height: 399.94px;
 border-radius: 0px 0px 28.46px 28.46px;
 }
 .proj-img{
-    height: 250px
+    height: 250px;
+    background-color: gray;
+    border-radius: 25px 25px 0px 0px;
 }
 .proj-title{
     font-family: 'Rubik', sans-serif;
